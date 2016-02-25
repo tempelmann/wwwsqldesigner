@@ -50,6 +50,12 @@
 				<xsl:text>')</xsl:text>
 			</xsl:for-each>
 
+			<xsl:if test="comment">
+				<xsl:text> /* </xsl:text>
+				<xsl:value-of select="comment" />
+				<xsl:text> */</xsl:text>
+			</xsl:if>
+
 			<xsl:if test="not (position()=last())">
 				<xsl:text>,
 </xsl:text>
